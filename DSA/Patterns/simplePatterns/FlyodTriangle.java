@@ -1,25 +1,18 @@
 package DSA.Patterns.simplePatterns;
 import java.util.Scanner;
-// pattern Hollow Rectangle
-// Please enter a number
-// 5
-// *****
-// *   *
-// *   *
-// *   *
-// *****
-public class HollowRectangle {
-    public static void main(String args[]){
+public class FlyodTriangle {
+      public static void main(String args[]){
 
         Scanner sc = new Scanner(System.in);
 
         System.out.println("Please enter a number");
         int n = sc.nextInt();
-
+        int counter = 1 ; 
         for(int i = 0 ; i < n ; i++){
             for(int j = 0 ; j < n ; j++){
-                if(i == 0 || i == n-1 || j == 0 || j == n-1){
-                    System.out.print("*");
+                if(j <= i ){
+                    System.out.print(counter + "  ");
+                    counter++;
                 }else{
                     System.out.print(" ");
                 }
@@ -28,4 +21,7 @@ public class HollowRectangle {
             System.out.println("");
         }
     }
+
+
+
 }
